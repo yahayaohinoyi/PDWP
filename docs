@@ -1,0 +1,28 @@
+DOCKER THE SOFTWARE TECHNOLOGY
+-> Docker provides the OS virtualization known as containers
+-> The problem docker solves is basically unifying Software development environment making sure all project dependencies and platform are the same.
+-> Docker containers shares the kernel and runs on the underlying hardware OS as a process which makes it differnt from a VM
+-> Docker considers every line in the dockerfile as an image with the first line as its base
+-> When docker builds, each layer is stacked on the next and merged into one single image/layer using the union file system
+-> UnionFS allows files from different file system to be overlayed on each other just like they're in a single coherent file system
+-> Docker image is the final executable that contains everything needed to run an application. Say blueprint of an application
+-> When a docker image runs on the host computer, it spawns a process in its own namespace, this is called a container.
+-> When a container runs, changes are applied to the container layer and when the container is stopped, the changes are lost. This is because containers run in a process in memory and when the process stops every space allocated to that process is returned
+-> Docker registry is a place where you can store docker images. Mostly Dockerhub. It's that basic.
+-> Dockerfile contains a set of instructions required to build an image
+-> A typical Dockerfile contains keywords like FROM COPY ADD CMD ENV RUN
+-> Difference between RUN and CMD is RUN adds the dependency to the base image while CMD runs a command when the container is up and running.
+-> Docker engine is a client-server application that provides the platform, runtime and tooling for building and managing docker images.
+-> Docker daemon is a service that runs in the background of the host computer and handles the heavy lifting of most of the Docker commands
+-> Docker CLI is the primary way you interact with docker
+-> Docker-compose is a tool for defining and running multiple-container application
+-> Docker machine is a tool for installing Docker Engines on multiple Vhosts and then managing the hosts
+-> docker info
+-> docker inspect <IMG> tells us more about an image. The terribly useful parts are the layers that make up the final image, the executables and the command
+-> docker rm <CONTAINER> docker rmi <IMG>
+-> docker pull <IMG>
+-> Docker images have an associated tag. tags typically include names and version labels. Tags make it easy to rollback to previous versions of an image
+-> docker run -p 80:80 <IMG> runs an image(builds a container) on port 80 in docker and forwards to 80 on the host machine
+(First Stop at Page 31) 
+
+
