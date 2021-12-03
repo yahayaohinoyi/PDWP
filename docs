@@ -25,4 +25,17 @@ DOCKER THE SOFTWARE TECHNOLOGY
 -> docker run -p 80:80 <IMG> runs an image(builds a container) on port 80 in docker and forwards to 80 on the host machine
 (First Stop at Page 31) 
 
+-> docker stop <CONTAINER> stops a running container
+-> docker ps shows running containers, docker ps -a shows all
 
+-> Add/copy command copies file from a directory, makes it into an image and runs the container while the VOLUME command just copy volumes to the running container
+
+
+Guidelines for writing Dockerfiles
+-> containers should be ephemeral(stop, destroy and restart)
+-> Keep the build context minimal(remove all unneeded files i.e dockerignore)
+-> Use multistage builds
+-> Skip unwanted packages
+-> Minimize the number of layers
+
+(Second stop at 81)
