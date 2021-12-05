@@ -60,4 +60,4 @@ Docker Compose File Reference
 -> docker network <CONT>
 -> docker inspect <CONT>
 -> you could use service name in place of ip address :)
--> docker logs
+-> docker logs <CONT>
