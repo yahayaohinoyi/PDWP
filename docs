@@ -39,3 +39,25 @@ Guidelines for writing Dockerfiles
 -> Minimize the number of layers
 
 (Second stop at 81)
+
+Docker Compose 
+-> Docker makes it easy to tie each microservice to a container via docker networks while docker-compose makes orchestration of all of these containers very easy
+-> Docker-compose describes the services, networks and volumes required for the application to get started
+-> docker-compose up to bring up all containers
+-> docker-compose stop stops the container
+-> docker-compose started
+-> docker-compose logs
+-> docker-compose down
+-> docker-compose build
+-> docker-compose exec <cont> <cmd>   
+Docker Compose File Reference
+-> Services: These are the first root key of the docker-compose file that needs to be created
+-> Build: The build key contains the configuration options that are applied at build time.
+-> Image: This tells docker compose what the base image of that service is if builds aren't specified else it uses the image for tag and versioning
+-> environment/env_file: As its name suggests, it's used to add environment variables to the app.
+-> depends_on -> This is used to set dependency requirements across various services.
+-> ports -> The key specifies the port that will be exposed to the port.
+-> docker network <CONT>
+-> docker inspect <CONT>
+-> you could use service name in place of ip address :)
+-> docker logs
